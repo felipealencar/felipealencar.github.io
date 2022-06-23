@@ -65,13 +65,17 @@ technologies:
   - name: POX
     web_url: https://github.com/topics/scikit-learn
 
+  - name: LaTeX
+    web_url: https://github.com/topics/latex
+    image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/latex/latex.png
+
   - name: PHP
     web_url: https://github.com/topics/php
     image_url: https://raw.githubusercontent.com/github/explore/ccc16358ac4530c6a69b1b80c7223cd2744dea83/topics/php/php.png
 
   - name: Laravel
-    web_url: https://github.com/topics/php
-    image_url: https://raw.githubusercontent.com/github/explore/ccc16358ac4530c6a69b1b80c7223cd2744dea83/topics/php/php.png
+    web_url: https://github.com/topics/laravel
+    image_url: https://raw.githubusercontent.com/github/explore/56a826d05cf762b2b50ecbe7d492a839b04f3fbf/topics/laravel/laravel.png
   
   - name: JavaScript
     web_url: https://github.com/topics/javascript
@@ -79,11 +83,11 @@ technologies:
 
   - name: Node.js
     web_url: https://github.com/topics/nodejs
-    image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png
+    image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png
 
   - name: Express.js
     web_url: https://github.com/topics/express
-    image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png
+    image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/express/express.png
   
   - name: Flutter
     web_url: https://github.com/topics/flutter

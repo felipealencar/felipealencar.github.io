@@ -1,10 +1,10 @@
 ---
-title: "Welcome to Jekyll!"
+title: "Migrating from felipealencar.net"
 published: true
 type: "post"
 ---
 
-**Hello world**, this is my first Jekyll blog post.
+**Hello world**, I'm still transfering the content from my old blog (http://felipealencar.net) to here. See you soon.
 
 I hope you like it!
 
