@@ -46,19 +46,7 @@ social_media:
   # website: http://your_website_url
   # youtube: your_username
 
-topics:
-  - name: Applied Artificial Intelligence Learning
-    web_url: https://github.com/topics/artificial-intelligence
-
-  - name: Deep Learning
-    web_url: https://github.com/topics/deep-learning
-
-  - name: Models at Runtime
-    web_url: https://github.com/topics/mart
-
-  - name: Software-defined networking
-    web_url: https://github.com/topics/sdn
-
+technologies:
   - name: Python
     web_url: https://github.com/topics/python
     image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png
@@ -71,10 +59,32 @@ topics:
     web_url: https://github.com/topics/scikit-learn
     image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/scikit-learn/scikit-learn.png
 
+  - name: Mininet
+    web_url: https://github.com/topics/mininet  
+
+  - name: POX
+    web_url: https://github.com/topics/scikit-learn
+
   - name: PHP
+    web_url: https://github.com/topics/php
+    image_url: https://raw.githubusercontent.com/github/explore/ccc16358ac4530c6a69b1b80c7223cd2744dea83/topics/php/php.png
+
+  - name: Laravel
     web_url: https://github.com/topics/php
     image_url: https://raw.githubusercontent.com/github/explore/ccc16358ac4530c6a69b1b80c7223cd2744dea83/topics/php/php.png
   
   - name: JavaScript
     web_url: https://github.com/topics/javascript
     image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png
+
+  - name: Node.js
+    web_url: https://github.com/topics/nodejs
+    image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png
+
+  - name: Express.js
+    web_url: https://github.com/topics/express
+    image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png
+  
+  - name: Flutter
+    web_url: https://github.com/topics/flutter
+    image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/flutter/flutter.png

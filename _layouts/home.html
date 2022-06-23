@@ -8,21 +8,27 @@
       {{ content }}
     </div>
 
-    <div class="my-6">
-      {% include projects.html %}
-    </div>
+    {% include research-interests.html %}
 
-    {% if site.topics %}
-      <div class="my-6">
-        {% include interests.html %}
-      </div>
-    {% endif %}
+    {% include research-projects.html %}
+
+    {% include last-papers.html %}
 
     {% unless posts_total == 0 %}
       <div class="my-6">
         {% include thoughts.html %}
       </div>
     {% endunless %}
+
+    {% if site.technologies %}
+      <div class="my-6">
+        {% include technologies.html %}
+      </div>
+    {% endif %}
+
+    <div class="my-6">
+      {% include repos.html %}
+    </div>
   </div>
 {% else %}
   <div class="d-md-flex min-height-full {% unless site.style == 'dark' %}border-md-bottom{% endunless %}">
@@ -38,15 +44,23 @@
           </div>
         {% endunless %}
 
-        {% include projects.html %}
+        {% include research-interests.html %}
 
-        {% if site.topics %}
-          {% include interests.html %}
-        {% endif %}
+        {% include research-projects.html %}
+        
+        {% include repos.html %}
 
         {% unless posts_total == 0 %}
+          <h2 {% if site.style == 'dark' %}class="text-white"{% endif %}>Last Posts</h2>
+          <p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">Posts about research findings or software development.</p>
           {% include thoughts.html %}
         {% endunless %}
+
+        {% include papers-i-read.html %}
+
+        {% if site.technologies %}
+          {% include technologies.html %}
+        {% endif %}
       </div>
     </div>
   </div>
