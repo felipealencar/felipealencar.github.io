@@ -12,11 +12,11 @@
     {% endif %}
     <p class="f3 lh-condensed text-center link-gray-dark mb-0 mt-1">{{ technology.name }}</p>
     {% if technology.description %}
-      <p class="f5 text-gray text-center mb-0 mt-1">{{ technology.description }}</p>
+      <p class="f5 text-white text-center mb-0 mt-1">{{ technology.description }}</p>
     {% endif %}
   </a>
 {% else %}
-  <div class="github-component position-relative height-full text-center border border-gray-light rounded-1 bg-white p-5">
+  <div class="github-component position-relative height-full text-center border border-gray-light rounded-1 bg-dark p-5">
     {% if technology.image_url %}
       <img src="{{ technology.image_url }}" width="64" height="64" class="mx-auto rounded-1 mb-3" alt="{{ technology.name }}">
     {% else %}
@@ -29,7 +29,7 @@
     {% endif %}
     <p class="f3 lh-condensed text-center mb-0 mt-1">{{ technology.name }}</p>
     {% if technology.description %}
-      <p class="f5 text-gray text-center mb-0 mt-1">{{ technology.description }}</p>
+      <p class="f5 text-white text-center mb-0 mt-1">{{ technology.description }}</p>
     {% endif %}
   </div>
 {% endif %}
