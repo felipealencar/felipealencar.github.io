@@ -1,5 +1,5 @@
 <h2 {% if site.style == 'dark' %}class="text-white"{% endif %}>Repositories</h2>
-<p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">GitHub repositories that I've built.</p>
+<p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">GitHub repositories that I've been working on.</p>
 <div class="d-sm-flex flex-wrap gutter-condensed mb-4">
   {% if site.projects.sort_by == 'stars' %}
     {% assign sort_order = 'stargazers_count', 'last' %}
@@ -25,3 +25,4 @@
     {% endunless %}
   {% endfor %}
 </div>
+<p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">For the full list of repositories, please visit <a  {% if site.style == 'dark' %}class="link-light"{% endif %} href="https://github.com/felipealencar">my GitHub profile</a>.</p>
