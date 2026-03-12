@@ -733,10 +733,10 @@ body.item .share-links li {
   display: inline-flex;
   align-items: center;
   z-index: 25;
-  border: 1px solid rgba(16, 24, 40, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 999px;
   overflow: hidden;
-  background: #fff;
+  background: transparent;
 }
 
 .show-search,
@@ -746,10 +746,10 @@ body.item .share-links li {
 
 #main-menu ul &gt; li &gt; a,
 #main-menu ul#main-menu-nav &gt; li &gt; a {
-  font-family: sohne, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
+  font-family: &#39;Inter&#39;, -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, sans-serif;
   font-style: normal;
   font-weight: 400;
-  color: rgb(36, 36, 36);
+  color: #ffffff;
   font-size: 14px;
   line-height: 20px;
   height: 70px;
@@ -757,8 +757,166 @@ body.item .share-links li {
   align-items: center;
 }
 
+#header-wrap,
+#top-bar {
+  background: linear-gradient(165deg, #0c111d 0%, #111827 70%, #0f172a 100%);
+}
+
+#header-wrap .container.row,
+#top-bar .container.row {
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+  padding: 0 24px;
+}
+
+#header-wrap .container.row {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  float: none;
+  margin: 0 20px 0 0;
+  order: 1;
+  flex: 0 0 auto;
+}
+
+.header-menu {
+  float: none;
+  flex: 1;
+  order: 2;
+  display: flex;
+  justify-content: flex-end;
+  min-width: 0;
+  padding-right: 180px;
+}
+
+#main-menu {
+  width: auto;
+  max-width: 100%;
+}
+
+#main-menu ul#main-menu-nav {
+  width: auto;
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#main-menu ul#main-menu-nav > li {
+  float: none;
+}
+
+#main-menu ul#main-menu-nav > li > a {
+  white-space: nowrap;
+}
+
+#main-menu ul#main-menu-nav &gt; li:hover,
+#main-menu ul#main-menu-nav &gt; li:hover &gt; a {
+  background: transparent;
+  color: #d62828;
+}
+
 #main-menu ul#main-menu-nav &gt; li:last-child &gt; a {
-  padding-right: 28px;
+  padding-right: 15px;
+}
+
+#main-menu ul#main-menu-nav &gt; li.menu-pill-blog &gt; a {
+  height: 36px;
+  line-height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: transparent;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+#main-menu ul#main-menu-nav &gt; li.menu-pill-blog {
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+#main-menu ul#main-menu-nav &gt; li.menu-pill-blog &gt; a:hover {
+  background: #d62828;
+  border-color: #d62828;
+  color: #ffffff;
+}
+
+#main-menu ul#main-menu-nav &gt; li.menu-social-icon {
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+#main-menu ul#main-menu-nav &gt; li.menu-social-icon &gt; a {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-left: 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#main-menu ul#main-menu-nav &gt; li.menu-social-icon &gt; a:hover {
+  background: #d62828;
+  border-color: #d62828;
+  color: #ffffff;
+}
+
+#main-menu ul#main-menu-nav &gt; li.menu-social-icon &gt; a:before {
+  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  font-family: 'Font Awesome 5 Brands';
+  font-size: 14px;
+}
+
+#main-menu ul#main-menu-nav &gt; li.menu-social-icon.instagram &gt; a:before {
+  content: '\f16d';
+}
+
+#main-menu ul#main-menu-nav &gt; li.menu-social-icon.linkedin &gt; a:before {
+  content: '\f0e1';
+}
+
+#main-menu ul#main-menu-nav &gt; li.menu-social-icon.threads &gt; a:before {
+  content: '@';
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+#main-menu ul#main-menu-nav &gt; li.menu-social-icon.gmail &gt; a:before {
+  content: '\f0e0';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.show-search,
+.hide-search,
+.show-search:hover,
+.hide-search:hover {
+  color: #ffffff;
+}
+
+.show-search:hover,
+.hide-search:hover {
+  color: #d62828;
 }
 
 .header-lang-switch .lang-link {
@@ -768,16 +926,16 @@ body.item .share-links li {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: .04em;
-  color: #0f2747;
+  color: #ffffff;
   text-transform: uppercase;
 }
 
 .header-lang-switch .lang-link + .lang-link {
-  border-left: 1px solid rgba(16, 24, 40, 0.14);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .header-lang-switch .lang-link:hover {
-  background: #0f2747;
+  background: #d62828;
   color: #fff;
 }
 
@@ -1038,10 +1196,11 @@ body.item.static_page .item-post .post-body {
 .landing-shell {
   margin: 0;
   width: 100%;
+  --landing-intro-bg-overlay: linear-gradient(165deg, rgba(12, 17, 29, 0.72) 0%, rgba(17, 24, 39, 0.72) 70%, rgba(15, 23, 42, 0.72) 100%);
 }
 
 .landing-intro {
-  background: linear-gradient(165deg, #0c111d 0%, #111827 70%, #0f172a 100%);
+  background-color: #0f172a;
   color: #fff;
   border: 1px solid rgba(148, 163, 184, 0.22);
   border-radius: 0;
@@ -1050,9 +1209,59 @@ body.item.static_page .item-post .post-body {
   text-align: center;
   min-height: calc(100vh - 70px);
   position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/* Hero carousel — 3 slides, 5s each, 15s cycle */
+.landing-carousel {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+  opacity: 0;
+  animation: hero-carousel-fade 15s ease-in-out infinite;
+}
+
+/* Replace the URL values below with your own images */
+.carousel-slide-1 {
+  background-image: var(--landing-intro-bg-overlay), url(https://blogger.googleusercontent.com/img/a/AVvXsEjfSW8_Hiy7M16RByVuLg09PkAv3Xkra7YeQhQSCgsLM9KTO7aqRHSBO5rP_YJRg4vgitFhQiLBOw1lTvwEjUAri3WBfhtOB8ah68FDnnvvoINS-mre_p_Kn1WQOxBP-wK7RPS3ef3BzlMhKwQZqcuYa6UBPCIgwfn3UqhsivjiMsG7Na_yUIJnpdXqLIWv=s16000);
+  animation-delay: 0s;
+}
+
+.carousel-slide-2 {
+  /* TODO: replace with your second hero image URL */
+  background-image: var(--landing-intro-bg-overlay), url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqR2zJ74pmt8b8hsYIPrtfwynWKvldhqAShcXpoJgZutvX0sysPT-JAmifAUaxg7YRLFYkud9ztdBw3LfBVcHbCTv95n4yQeo8cMzWkpmzC5POnI__TqNhyaEVKWdIk_WfiNVEIVrop_TK0tdtoYtu81FkiGc690EURHIw5ugHp3Bw3Po6Un17YfnkhwCG/s1080/wave2.JPG);
+  background-position: center;
+  animation-delay: 5s;
+}
+
+.carousel-slide-3 {
+  /* TODO: replace with your third hero image URL */
+  background-image: var(--landing-intro-bg-overlay), url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipF36rycF1QpiELrNYD-ZHAPnMANfM9TH2xZYGgFkA5wDezdRHMk3JJMhPrzN7JCIg2zzEgAURTqmmQOAGx3yAxph8BiEpUdSR0Yl9_EaS0V6P01-oXfr6GmW21qw78icR0XwMAvklilB_AQzPbxwkYKgE9H4n_rDzKb-iLXXyfB4UBDrntfBT9y4ntEBJ/s1440/work2.jpg);
+  animation-delay: 10s;
+}
+
+@keyframes hero-carousel-fade {
+  0%   { opacity: 0; }
+  5%   { opacity: 1; }
+  33%  { opacity: 1; }
+  40%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.landing-intro > *:not(.landing-carousel):not(.landing-post-overlay) {
+  position: relative;
+  z-index: 1;
 }
 
 .landing-hello {
@@ -1074,7 +1283,7 @@ body.item.static_page .item-post .post-body {
 }
 
 .landing-name-highlight {
-  background-image: url('https://picsum.photos/1200/300?blur=1');
+  background-image: url(&#39;https://picsum.photos/1200/300?blur=1&#39;);
   background-size: cover;
   background-position: center;
   -webkit-background-clip: text;
@@ -1092,9 +1301,11 @@ body.item.static_page .item-post .post-body {
 }
 
 .landing-more {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 8px;
+  width: fit-content;
+  margin: 0 auto;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: .1em;
@@ -1103,7 +1314,7 @@ body.item.static_page .item-post .post-body {
 }
 
 .landing-more:after {
-  content: '\2193';
+  content: &#39;\2193&#39;;
   font-size: 14px;
 }
 
@@ -1112,6 +1323,7 @@ body.item.static_page .item-post .post-body {
   left: 24px;
   right: 24px;
   bottom: 24px;
+  z-index: 1;
   background: rgba(15, 23, 42, 0.55);
   border: 1px solid rgba(148, 163, 184, 0.28);
   border-radius: 16px;
@@ -1174,20 +1386,51 @@ body.item.static_page .item-post .post-body {
   border-radius: 0;
   padding: 48px 34px;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .landing-kicker {
-  display: inline-block;
+  display: block;
   font-size: 12px;
   letter-spacing: .08em;
   text-transform: uppercase;
   color: #475467;
   font-weight: 700;
   margin: 0 0 14px;
+  text-align: center;
 }
 
 .landing-about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 170px) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.landing-about-grid &gt; div {
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.landing-about-photo {
+  width: 170px;
+  max-width: 100%;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.landing-about-photo img {
   display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid rgba(15, 39, 71, 0.22);
+  background: #f2f4f7;
 }
 
 .landing-about-text {
@@ -1203,10 +1446,13 @@ body.item.static_page .item-post .post-body {
   font-size: 30px;
   line-height: 1.2;
   color: #101828;
+  text-align: center;
 }
 
 .landing-about-dynamic {
   margin-top: 10px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .landing-about-dynamic .post-body,
@@ -1221,12 +1467,17 @@ body.item.static_page .item-post .post-body {
 
 .landing-about-fallback {
   margin-top: 16px;
+  text-align: center;
 }
 
 .landing-cv {
   background: #f8fafc;
   border-top: 1px solid rgba(16, 24, 40, 0.08);
   padding: 48px 34px;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .landing-cv-grid {
@@ -1274,6 +1525,101 @@ body.item.static_page .item-post .post-body {
   letter-spacing: .04em;
 }
 
+.landing-summary {
+  background: #ffffff;
+  border-top: 1px solid rgba(16, 24, 40, 0.08);
+  padding: 44px 34px;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.landing-summary p {
+  margin: 0;
+  color: #344054;
+  font-size: 15px;
+  line-height: 1.75em;
+  text-align: center;
+}
+
+.landing-summary-actions {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.landing-shell a {
+  transition: color .2s ease, background-color .2s ease, border-color .2s ease;
+}
+
+.landing-about a,
+.landing-summary a {
+  color: #d62828;
+}
+
+.landing-cv-button {
+  border-color: rgba(214, 40, 40, 0.35);
+  color: #d62828;
+}
+
+.landing-cv-button:hover {
+  background: #d62828;
+  border-color: #d62828;
+  color: #ffffff;
+}
+
+.landing-theme-navy {
+  background: #0f2747;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.landing-theme-black {
+  background: #0b0b0b;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.landing-theme-red {
+  background: #d62828;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+section#contact.landing-summary.landing-theme-red {
+  background: #991f1f;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.landing-theme-navy .landing-kicker,
+.landing-theme-black .landing-kicker,
+.landing-theme-red .landing-kicker {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.landing-theme-navy .landing-section-title,
+.landing-theme-black .landing-section-title,
+.landing-theme-red .landing-section-title,
+.landing-theme-navy p,
+.landing-theme-black p,
+.landing-theme-red p {
+  color: #ffffff;
+}
+
+.landing-theme-navy a,
+.landing-theme-black a,
+.landing-theme-red a {
+  color: #ff6b6b;
+}
+
+.landing-theme-red .landing-cv-button {
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #ffffff;
+}
+
+.landing-theme-red .landing-cv-button:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #d62828;
+}
+
 body.home #content-wrapper {
   margin: 0;
   padding: 0;
@@ -1306,6 +1652,17 @@ body.home .grid-posts {
   pointer-events: none;
 }
 
+@media screen and (max-width: 1180px) {
+  .landing-about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-about-photo {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+}
+
 @media screen and (max-width: 980px) {
   body.item.static_page .item-post .post-body {
     font-size: 16px;
@@ -1324,6 +1681,13 @@ body.home .grid-posts {
   .landing-about,
   .landing-cv {
     padding: 22px;
+  }
+
+  .landing-about,
+  .landing-cv,
+  .landing-summary {
+    min-height: auto;
+    justify-content: flex-start;
   }
 
   .landing-title {
@@ -1349,6 +1713,15 @@ body.home .grid-posts {
     grid-template-columns: 1fr;
   }
 
+  .landing-about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-about-photo {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
   .about-section h2 {
     font-size: 25px;
   }
@@ -1369,19 +1742,135 @@ body.home .grid-posts {
 }
 
 @media screen and (max-width: 980px) {
+  .mobile-menu .menu-social-icon {
+    display: block !important;
+    float: left;
+    width: auto;
+    line-height: 1;
+    margin: 12px 8px 0 0;
+  }
+
+  .mobile-menu .menu-social-icon.instagram {
+    clear: left;
+  }
+
+  .mobile-menu .menu-social-icon > a {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(15, 23, 42, 0.28);
+    border-radius: 999px;
+    color: #0f172a;
+    text-decoration: none;
+    padding: 0;
+  }
+
+  .mobile-menu .menu-social-icon > a:before {
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    font-family: 'Font Awesome 5 Brands';
+    font-size: 14px;
+  }
+
+  .mobile-menu .menu-social-icon.instagram > a:before {
+    content: '\f16d';
+  }
+
+  .mobile-menu .menu-social-icon.linkedin > a:before {
+    content: '\f0e1';
+  }
+
+  .mobile-menu .menu-social-icon.threads > a:before {
+    content: '@';
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .mobile-menu .menu-social-icon.gmail > a:before {
+    content: '\f0e0';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 13px;
+  }
+
+  .mobile-menu .menu-social-icon > a:hover {
+    background: #d62828;
+    border-color: #d62828;
+    color: #ffffff;
+  }
+
+  #header-wrap .container.row {
+    justify-content: flex-start;
+    padding-left: 24px;
+    padding-right: 58px;
+    gap: 8px;
+  }
+
+  .header-menu {
+    display: none !important;
+  }
+
+  .mobile-menu-wrap {
+    display: block !important;
+    top: 70px;
+  }
+
+  .mobile-menu-toggle {
+    display: block !important;
+    position: static;
+    order: 2;
+    flex: 0 0 auto;
+    width: 40px;
+    height: 70px;
+    line-height: 70px;
+    background: transparent;
+    color: #ffffff !important;
+    text-align: center;
+    z-index: 30;
+    margin: 0;
+    align-self: center;
+  }
+
+  .mobile-menu-toggle:hover,
+  .nav-active .mobile-menu-toggle,
+  .nav-active .mobile-menu-toggle:hover {
+    color: #ffffff !important;
+  }
+
+  .mobile-menu-toggle:before {
+    content: '\2630';
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
+    color: currentColor;
+  }
+
+  .nav-active .mobile-menu-toggle:before {
+    content: '\2715';
+    font-size: 22px;
+  }
+
   .header-logo,
   .main-logo {
     width: auto !important;
     max-width: 190px !important;
     float: left !important;
     text-align: left !important;
-    margin: 0 0 0 58px !important;
+    margin: 0 !important;
   }
 
   .header-logo {
     height: 70px;
     display: flex;
     align-items: center;
+    flex: 0 0 auto;
+    order: 1;
   }
 
   .main-logo {
@@ -1568,6 +2057,7 @@ body.home .grid-posts {
 <!-- Outer Wrapper -->
 <div id='outer-wrapper'>
 <!-- Main Top Bar -->
+  <b:if cond='data:widgets any w =&gt; ((w.sectionId == &quot;top-bar-nav&quot; or w.sectionId == &quot;top-bar-social&quot;) and w.visible)'>
   <div id='top-bar'>
     <div class='container row'>
         <b:section class='top-bar-nav' id='top-bar-nav' maxwidgets='1' name='Top Navigation' showaddelement='yes'>
@@ -1634,6 +2124,7 @@ body.home .grid-posts {
          </b:section>
     </div>
   </div>
+  </b:if>
   <div class='clearfix'/>
   <!-- Header Wrapper -->
   <div id='header-wrap'>
@@ -1645,13 +2136,13 @@ body.home .grid-posts {
         <b:section class='main-logo' id='main-logo' maxwidgets='1' name='Header Logo' showaddelement='yes'>
               <b:widget id='Header1' locked='true' title='felipealencar (Header)' type='Header' version='2' visible='true'>
                 <b:widget-settings>
-                  <b:widget-setting name='displayUrl'>https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDl-NgWQ7LJd5Pcgbcann-jpDQpoh9Leu5oBgtNz2r3nVxPxZ4mLijBOUZR6Y9rFY_DobBMNkmoMf_e57BgnXSDgJfSg8rNYQsSPhJSgze3TNhO2WrjuX9RumKjiwe3SwIt8ZCGJWdrJhe/s1600/topo-black.png</b:widget-setting>
-                  <b:widget-setting name='displayHeight'>57</b:widget-setting>
-                  <b:widget-setting name='sectionWidth'>172</b:widget-setting>
+                  <b:widget-setting name='displayUrl'>https://blogger.googleusercontent.com/img/a/AVvXsEibUb39k2p4AqTds30Tk_v6CDAvZErsj7Lu6c_Ppro9KbVGYxVGkQZJ8O085-kjJ3cl0dPQLuYnVKKwasL5MMhcEfV3lY6TCf_3DxmXPbN0hD5iHFq5xXByGVXSbp0JaWJ5hG-JEzAX55bs1a8s6Oaj4TufgAIZG76DPfgPCs2sdEn-Mmb4D6PJ_-8zhifq=s566</b:widget-setting>
+                  <b:widget-setting name='displayHeight'>566</b:widget-setting>
+                  <b:widget-setting name='sectionWidth'>150</b:widget-setting>
                   <b:widget-setting name='useImage'>true</b:widget-setting>
                   <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
                   <b:widget-setting name='imagePlacement'>REPLACE</b:widget-setting>
-                  <b:widget-setting name='displayWidth'>300</b:widget-setting>
+                  <b:widget-setting name='displayWidth'>538</b:widget-setting>
                 </b:widget-settings>
                 <b:includable id='main' var='this'>
       <div class='header-widget'>
@@ -1718,6 +2209,11 @@ body.home .grid-posts {
                 <b:loop values='data:links' var='link'>
                   <li><a expr:href='data:link.target' role='menuitem'><data:link.name/></a></li>
                 </b:loop>
+                <li class='menu-pill-blog'><a href='/search' role='menuitem'>Blog</a></li>
+                <li class='menu-social-icon instagram'><a href='https://www.instagram.com/felipealencarlopes' rel='noopener noreferrer' role='menuitem' target='_blank' title='Instagram'/></li>
+                <li class='menu-social-icon linkedin'><a href='https://www.linkedin.com/in/felipealencarlopes/' rel='noopener noreferrer' role='menuitem' target='_blank' title='LinkedIn'/></li>
+                <li class='menu-social-icon threads'><a href='https://www.threads.net/@felipealencarlopes' rel='noopener noreferrer' role='menuitem' target='_blank' title='Threads'/></li>
+                <li class='menu-social-icon gmail'><a href='mailto:felipealencarlopes@gmail.com' role='menuitem' title='Gmail'/></li>
               </ul>
             </b:includable>
           </b:widget>
@@ -1765,7 +2261,8 @@ body.home .grid-posts {
         'Education and Awards': 'Formação e Prêmios',
         'Publications': 'Publicações',
         'Courses': 'Disciplinas',
-        'Contact': 'Contato'
+        'Contact': 'Contato',
+        'Blog': 'Blog'
       };
 
       var selectors = [
@@ -1925,10 +2422,74 @@ body.home .grid-posts {
         });
       }
 
+      function mapHomepageMenuToSections() {
+        if (!document.body || !document.body.classList.contains('home')) return;
+
+        var sectionByLabel = {
+          'Home': '#top',
+          'Início': '#top',
+          'About': '#about',
+          'Sobre': '#about',
+          'Experience': '#experience',
+          'Experiência': '#experience',
+          'Education and Awards': '#education',
+          'Formação e Prêmios': '#education',
+          'Publications': '#publications',
+          'Publicações': '#publications',
+          'Courses': '#courses',
+          'Disciplinas': '#courses',
+          'Contact': '#contact',
+          'Contato': '#contact'
+        };
+
+        document.querySelectorAll('#main-menu-nav a, .mobile-menu a').forEach(function(link) {
+          var label = (link.textContent || '').trim();
+          var section = sectionByLabel[label];
+          if (!section) return;
+          link.setAttribute('href', section);
+        });
+      }
+
+      function enableSmoothHomepageAnchorScroll() {
+        if (!document.body || !document.body.classList.contains('home')) return;
+        if (window.__smoothHomepageAnchorsBound) return;
+
+        document.addEventListener('click', function(event) {
+          var link = event.target && event.target.closest ? event.target.closest('a[href^="#"]') : null;
+          if (!link) return;
+
+          var href = (link.getAttribute('href') || '').trim();
+          if (!href || href === '#') return;
+
+          var target = document.querySelector(href);
+          if (!target) return;
+
+          event.preventDefault();
+
+          var headerOffset = 78;
+          var targetY = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+          window.scrollTo({
+            top: Math.max(0, targetY),
+            behavior: 'smooth'
+          });
+
+          if (history && history.replaceState) {
+            history.replaceState(null, '', href);
+          }
+        });
+
+        window.__smoothHomepageAnchorsBound = true;
+      }
+
       function runLanguageMode() {
         translateInterface();
+        mapHomepageMenuToSections();
+        enableSmoothHomepageAnchorScroll();
         applyHomepageLanguageFilter();
         watchDynamicLinksForPortuguese();
+
+        setTimeout(mapHomepageMenuToSections, 100);
+        setTimeout(mapHomepageMenuToSections, 500);
       }
 
       runLanguageMode();
@@ -1938,7 +2499,7 @@ body.home .grid-posts {
   </script>
 
   <div class='clearfix'/>
-  <b:if cond='not data:view.isHomepage'>
+  <b:if cond='data:view.isSingleItem and data:blog.pageType == &quot;item&quot;'>
    <div class='row ad-wrapper'>
  <b:if cond='data:widgets any w =&gt; w.sectionId == &quot;home-ad-top1&quot;'><div class='ad-disclosure'>Advertisement</div></b:if>
  <b:section class='home-ad-top' id='home-ad-top1' maxwidgets='1' name='Home Ads Top' showaddelement='yes'/>
@@ -2307,10 +2868,15 @@ body.home .grid-posts {
             </b:includable>
             <b:includable id='homePostsHeadline'>
               <b:if cond='data:view.isHomepage'>
-                <section class='landing-shell'>
+                <section class='landing-shell' id='top'>
                   <section class='landing-intro'>
+                    <div class='landing-carousel'>
+                      <div class='carousel-slide carousel-slide-1'></div>
+                      <div class='carousel-slide carousel-slide-2'></div>
+                      <div class='carousel-slide carousel-slide-3'></div>
+                    </div>
                     <p class='landing-hello'>HELLO, WORLD.</p>
-                    <h1 class='landing-title'>I&apos;m <span class='landing-name-highlight'>Felipe Alencar Lopes</span>.</h1>
+                    <h1 class='landing-title'>I&#39;m <span class='landing-name-highlight'>Felipe Alencar Lopes</span>.</h1>
                     <p class='landing-role'>Research Scientist | Applied AI | Software Engineer</p>
                     <a class='landing-more' href='#about'>Learn more</a>
 
@@ -2330,50 +2896,104 @@ body.home .grid-posts {
                     </div>
                   </section>
 
-                  <section class='landing-about' id='about'>
-                    <span class='landing-kicker'>A PROPOS</span>
+                  <section class='landing-about landing-theme-white' id='about'>
+                    <span class='landing-kicker'>About Me</span>
                     <div class='landing-about-grid'>
+                      <figure class='landing-about-photo'>
+                        <img alt='Profile picture' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXX9WkuwCcMDUlg7IqU5qiAVHz7lu29I6tVV8XRgXwv181uXES2oEcaApdDr40-8v4sXj7ZJ2dg-FR6OB0iOvIbDjnkhcR02-PWXwI5HcVLteBtPjfDlRh3jKvKgLp2nSGGs0CTKjPoUykXyvNSZQ_uFSVJ7Hyz9Hiz_POp1quQRmLKSJMZGKUXVddNMuH/s802/profile.png'/>
+                      </figure>
                       <div>
-                        <h2 class='landing-section-title'>About Me</h2>
                         <div class='landing-about-dynamic' id='landing-about-content'>
-                          <p class='landing-about-text'>Loading About page content...</p>
+                          <p class='landing-about-text'>
+                            I&#39;m a problem solver at heart, driven by curiosity about how technology can tackle real-world challenges. My background is in computer science, with an M.Sc. and Ph.D. from CIn/UFPE (Brazil) and international experience as a visiting researcher at the Karlsruhe Institute of Technology (KIT, Germany).
+                          </p>
+                          <p class='landing-about-text'>
+                            I started as a full-stack developer, then spent five years as an Assistant Professor at IFAL — teaching ~400 students, founding the LEAD (Laboratory of Data Analysis and Engineering), and being elected Professor of the Year three consecutive years.
+                          </p>
+                          <p class='landing-about-text'>
+                            Today I&#39;m a Research Scientist at Saint Louis University (Missouri, United States), building scalable AI models for plant disease detection, precision agriculture, and climate applications using remote sensing data.
+                          </p>
+                          <p class='landing-about-text' style='color: #6b7280; font-style: italic;'>
+                            Outside of work: surfing, hiking, and music — activities with much better signal-to-noise ratios than most datasets.
+                          </p>
                         </div>
+
+                        <div style='display:flex; flex-wrap:wrap; gap:8px; margin: 1.25rem 0;'>
+                        <span style='font-size:12px; padding:3px 10px; border-radius:100px; background:#E1F5EE; color:#085041; border:0.5px solid #5DCAA5;'>Artificial Intelligence</span>
+                          <span style='font-size:12px; padding:3px 10px; border-radius:100px; background:#E1F5EE; color:#085041; border:0.5px solid #5DCAA5;'>Generative AI</span>
+                          <span style='font-size:12px; padding:3px 10px; border-radius:100px; background:#E6F1FB; color:#0C447C; border:0.5px solid #85B7EB;'>Software Engineering</span>
+                          <span style='font-size:12px; padding:3px 10px; border-radius:100px; background:#E6F1FB; color:#0C447C; border:0.5px solid #85B7EB;'>Geospatial Science</span>
+                          <span style='font-size:12px; padding:3px 10px; border-radius:100px; background:#EAF3DE; color:#27500A; border:0.5px solid #97C459;'>Python</span>
+                          <span style='font-size:12px; padding:3px 10px; border-radius:100px; background:#E1F5EE; color:#085041; border:0.5px solid #5DCAA5;'>Precision Agriculture</span>
+                          <span style='font-size:12px; padding:3px 10px; border-radius:100px; background:#E6F1FB; color:#0C447C; border:0.5px solid #85B7EB;'>Deep Learning</span>
+                        </div>
+
+                        <div style='display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; margin-bottom:1.25rem;'>
+                          <div style='background:#f4f5f7; border-radius:8px; padding:12px; text-align:center;'>
+                            <span style='display:block; font-size:20px; font-weight:600; color:#0f172a;'>10+</span>
+                            <span style='font-size:11px; color:#64748b;'>Years Research</span>
+                          </div>
+                          <div style='background:#f4f5f7; border-radius:8px; padding:12px; text-align:center;'>
+                            <span style='display:block; font-size:20px; font-weight:600; color:#0f172a;'>30+</span>
+                            <span style='font-size:11px; color:#64748b;'>Publications</span>
+                          </div>
+                          <div style='background:#f4f5f7; border-radius:8px; padding:12px; text-align:center;'>
+                            <span style='display:block; font-size:20px; font-weight:600; color:#0f172a;'>~400</span>
+                            <span style='font-size:11px; color:#64748b;'>Students Taught</span>
+                          </div>
+                          <div style='background:#f4f5f7; border-radius:8px; padding:12px; text-align:center;'>
+                            <span style='display:block; font-size:20px; font-weight:600; color:#0f172a;'>3×</span>
+                            <span style='font-size:11px; color:#64748b;'>Prof. of the Year</span>
+                          </div>
+                        </div>
+
                         <p class='landing-about-fallback'><a href='/p/about.html'>Open the full About page</a></p>
                       </div>
                     </div>
                   </section>
 
-                  <section class='landing-cv' id='cv'>
-                    <span class='landing-kicker'>CV</span>
-                    <h2 class='landing-section-title'>Curriculum</h2>
-                    <div class='landing-cv-grid'>
-                      <article class='landing-cv-card'>
-                        <h3>Experience</h3>
-                        <ul>
-                          <li>Applied AI Research Scientist at Saint Louis University</li>
-                          <li>Associate Professor at IFAL (on leave)</li>
-                          <li>Principal Investigator and software development leadership</li>
-                        </ul>
-                      </article>
-                      <article class='landing-cv-card'>
-                        <h3>Education</h3>
-                        <ul>
-                          <li>PhD in Computer Science (CIn-UFPE)</li>
-                          <li>Research activities at KIT (Germany)</li>
-                          <li>Academic and industry collaboration projects</li>
-                        </ul>
-                      </article>
-                      <article class='landing-cv-card'>
-                        <h3>Focus Areas</h3>
-                        <ul>
-                          <li>Machine Learning and Deep Learning</li>
-                          <li>Data-driven systems and experimentation</li>
-                          <li>Scientific software and web engineering</li>
-                        </ul>
-                      </article>
+                  <!-- EXPERIENCE -->
+                  <section class='landing-summary landing-theme-navy' id='experience'>
+                    <span class='landing-kicker'>Experience</span>
+                    <p>From full-stack developer to professor to research scientist — over 10 years building at the intersection of software engineering, AI, and academia. Currently a Research Scientist at Saint Louis University focused on GeoAI and remote sensing. Previously Assistant Professor at IFAL (2018–2023), founder of the LEAD Lab, and developer at Indra.</p>
+                    <div class='landing-summary-actions'>
+                      <a class='landing-cv-button' href='/p/carreira.html'>Open full Experience page</a>
                     </div>
-                    <div class='landing-cv-cta'>
-                      <a class='landing-cv-button' href='/p/about.html'>Open Full CV / About</a>
+                  </section>
+
+                  <!-- EDUCATION & AWARDS -->
+                  <section class='landing-summary landing-theme-white' id='education'>
+                    <span class='landing-kicker'>Education &amp; Awards</span>
+                    <p>Ph.D. and M.Sc. in Computer Science from CIn/UFPE (Brazil), with international research at the Karlsruhe Institute of Technology (KIT, Germany). Elected Professor of the Year three consecutive years at IFAL. Research recognized through nationally funded projects and over 30 supported students at the LEAD Lab.</p>
+                    <div class='landing-summary-actions'>
+                      <a class='landing-cv-button' href='/p/formacao.html'>Open full Education and Awards page</a>
+                    </div>
+                  </section>
+
+                  <!-- PUBLICATIONS -->
+                  <section class='landing-summary landing-theme-black' id='publications'>
+                    <span class='landing-kicker'>Publications</span>
+                    <p>30+ scientific outputs spanning GeoAI, remote sensing, machine learning, data-driven systems, and software engineering. Research contributions include scalable models for plant disease detection, precision agriculture, and climate applications — published across peer-reviewed journals and international conferences.</p>
+                    <div class='landing-summary-actions'>
+                      <a class='landing-cv-button' href='/p/trabalhos-publicados.html'>Open full Publications page</a>
+                    </div>
+                  </section>
+
+                  <!-- COURSES -->
+                  <section class='landing-summary landing-theme-white' id='courses'>
+                    <span class='landing-kicker'>Courses</span>
+                    <p>Over five years teaching undergraduate and graduate courses in computing, AI, and software development at IFAL — reaching nearly 400 students. Courses span algorithms, software engineering, machine learning, and applied AI, with materials designed to bridge theory and real-world problem solving.</p>
+                    <div class='landing-summary-actions'>
+                      <a class='landing-cv-button' href='/p/disciplinas.html'>Open full Courses page</a>
+                    </div>
+                  </section>
+
+                  <!-- CONTACT -->
+                  <section class='landing-summary landing-theme-red' id='contact'>
+                    <span class='landing-kicker'>Contact</span>
+                    <p>Open to research collaborations, consulting opportunities, and academic partnerships — especially in GeoAI, remote sensing, and applied machine learning. Based at Saint Louis University. Reach out if you are working on problems where AI meets the physical world.</p>
+                    <div class='landing-summary-actions'>
+                      <a class='landing-cv-button' href='/p/contato.html'>Open full Contact page</a>
                     </div>
                   </section>
                 </section>
@@ -3006,7 +3626,7 @@ body.home .grid-posts {
       <!-- Sidebar Wrapper -->
       <b:if cond='not data:view.isHomepage and data:view.isMultipleItems'>
       <div id='sidebar-wrapper'>
-        <b:section class='sidebar' id='social-widget' maxwidgets='1' name='Social Widget' showaddelement='yes'>
+        <b:section class='sidebar' cond='not data:view.isMultipleItems' id='social-widget' maxwidgets='1' name='Social Widget' showaddelement='yes'>
           <b:widget id='LinkList75' locked='true' title='Social' type='LinkList' version='2' visible='true'>
             <b:widget-settings>
               <b:widget-setting name='link-3'>https://www.instagram.com/felipealencarlopes/</b:widget-setting>
@@ -4519,7 +5139,7 @@ body.home .grid-posts {
   </div>
 
  <div class='clearfix'/>
- <b:if cond='not data:view.isHomepage'>
+ <b:if cond='data:view.isSingleItem and data:blog.pageType == &quot;item&quot;'>
  <div class='row ad-wrapper'>
  <b:if cond='data:widgets any w =&gt; w.sectionId == &quot;home-ad-top2&quot;'><div class='ad-disclosure'>Advertisement</div></b:if>
  <b:section class='home-ad-top' id='home-ad-top2' maxwidgets='1' name='Home Ads Bottom' showaddelement='yes'>
