@@ -1,7 +1,13 @@
-# Personal website
+# Personal website (archived)
 
-This repository is based on the github's basic kickstart personal website [`github/personal-website` repository](https://github.com/github/personal-website). It automatically renders a webpage with my profile information, including a photo, bio, and repositories.
+This repository is no longer actively maintained.
 
-I just changed some style and content to satisfy my needs. It includes space to highlight my specific areas of interest in research projects, papers, and software development, like languages or industries. It also enables me to publish some blog posts.
+I have migrated the website back to **Blogger**, and future updates will be published there.
 
-![](https://user-images.githubusercontent.com/221550/110506678-51906280-80cd-11eb-803a-c41984bd9312.png)
+The GitHub Pages site now only redirects visitors to:
+
+- https://felipealencar.net
+
+## Previous setup
+
+This repository was based on GitHub's starter personal website template from [`github/personal-website`](https://github.com/github/personal-website), adapted with custom styles and content for research interests, projects, papers, and blog posts.
