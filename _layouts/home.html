@@ -4,31 +4,51 @@
   <div class="container-lg py-6 p-responsive text-center">
     {% include masthead.html metadata=true %}
 
-    <div {% if site.style == 'dark' %}class="text-white"{% endif %}>
-      {{ content }}
+    <div class="github-component text-left border border-gray-light {% if site.style == 'dark' %}bg-dark text-white{% else %}bg-white{% endif %} p-4 rounded-2 my-4">
+      <h2 class="mb-2 {% if site.style == 'dark' %}text-white{% endif %}">Welcome</h2>
+      <div class="f4 {% if site.style == 'dark' %}text-white{% endif %}">
+        {{ content }}
+      </div>
+      <div class="mt-3">
+        <a class="btn btn-sm mr-2 mb-2" href="#research-interests">Research</a>
+        <a class="btn btn-sm mr-2 mb-2" href="#research-projects">Projects</a>
+        <a class="btn btn-sm mr-2 mb-2" href="#selected-papers">Papers</a>
+        <a class="btn btn-sm mr-2 mb-2" href="#blog">Blog</a>
+        <a class="btn btn-sm mr-2 mb-2" href="#repositories">Repositories</a>
+      </div>
     </div>
 
-    {% include research-interests.html %}
+    <section id="research-interests" class="my-6">
+      {% include research-interests.html %}
+    </section>
     <hr>
-    {% include research-projects.html %}
+    <section id="research-projects" class="my-6">
+      {% include research-projects.html %}
+    </section>
     <hr>
-    {% include selected-papers.html %}
+    <section id="selected-papers" class="my-6">
+      {% include selected-papers.html %}
+    </section>
     <hr>
     {% unless posts_total == 0 %}
-      <div class="my-6">
+      <section id="blog" class="my-6 text-left">
+        <h2 {% if site.style == 'dark' %}class="text-white"{% endif %}>Blog</h2>
+        <p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">
+          Recent posts and notes. <a href="{{ '/blog/' | relative_url }}" {% if site.style == 'dark' %}class="text-white"{% endif %}>View all posts</a>.
+        </p>
         {% include thoughts.html %}
-      </div>
+      </section>
+      <hr>
     {% endunless %}
-    <hr>
     {% if site.technologies %}
-      <div class="my-6">
+      <section class="my-6">
         {% include technologies.html %}
-      </div>
+      </section>
+      <hr>
     {% endif %}
-    <hr>
-    <div class="my-6">
+    <section id="repositories" class="my-6">
       {% include repos.html %}
-    </div>
+    </section>
   </div>
 {% else %}
   <div class="d-md-flex min-height-full {% unless site.style == 'dark' %}border-md-bottom{% endunless %}">
@@ -39,31 +59,56 @@
     <div class="col-md-7 col-lg-8 col-xl-9 px-4 py-6 px-lg-7 border-top border-md-top-0 bg-gray-light" {% if site.style == 'dark' %}style="background-color: #2f363d !important"{% endif %}>
       <div class="mx-auto" style="max-width: 900px;">
         {% unless content == ""  %}
-          <div class="f4 {% if site.style == 'dark' %}text-white{% endif %} mb-6">
-            {{ content }}
+          <div class="github-component border border-gray-light {% if site.style == 'dark' %}bg-dark text-white{% else %}bg-white{% endif %} p-4 rounded-2 mb-6">
+            <h2 class="mb-2 {% if site.style == 'dark' %}text-white{% endif %}">Welcome</h2>
+            <div class="f4 {% if site.style == 'dark' %}text-white{% endif %}">
+              {{ content }}
+            </div>
+            <div class="mt-3">
+              <a class="btn btn-sm mr-2 mb-2" href="#research-interests">Research</a>
+              <a class="btn btn-sm mr-2 mb-2" href="#research-projects">Projects</a>
+              <a class="btn btn-sm mr-2 mb-2" href="#selected-papers">Papers</a>
+              <a class="btn btn-sm mr-2 mb-2" href="#blog">Blog</a>
+              <a class="btn btn-sm mr-2 mb-2" href="#repositories">Repositories</a>
+            </div>
           </div>
         {% endunless %}
 
-       
+        <section id="research-interests" class="mb-6">
+          {% include research-interests.html %}
+        </section>
         <hr>
-        {% include research-interests.html %}
+        <section id="research-projects" class="my-6">
+          {% include research-projects.html %}
+        </section>
         <hr>
-        {% include research-projects.html %}
-        <hr>
-        {% include selected-papers.html %}
-        <hr>
-        {% include repos.html %}
+        <section id="selected-papers" class="my-6">
+          {% include selected-papers.html %}
+        </section>
         <hr>
         {% unless posts_total == 0 %}
-          <h2 {% if site.style == 'dark' %}class="text-white"{% endif %}>Last Posts</h2>
-          <p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">Posts about research findings, articial intelligence, software development, and related stuff.</p>
-          {% include thoughts.html %}
+          <section id="blog" class="my-6">
+            <h2 {% if site.style == 'dark' %}class="text-white"{% endif %}>Blog</h2>
+            <p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">
+              Recent posts about research findings, artificial intelligence, software development, and related topics.
+              <a href="{{ '/blog/' | relative_url }}" {% if site.style == 'dark' %}class="text-white"{% endif %}>View all posts</a>.
+            </p>
+            {% include thoughts.html %}
+          </section>
+          <hr>
         {% endunless %}
+        <section id="repositories" class="my-6">
+          {% include repos.html %}
+        </section>
         <hr>
-        {% include papers-read.html %}
+        <section class="my-6">
+          {% include papers-read.html %}
+        </section>
         <hr>
         {% if site.technologies %}
-          {% include technologies.html %}
+          <section class="my-6">
+            {% include technologies.html %}
+          </section>
         {% endif %}
       </div>
     </div>
