@@ -575,14 +575,13 @@ var monthFormat = ["Janeiro", "Fevereiro", "Mar&#231;o", "Abril", "Maio", "Junho
 
 <style>
 /* Josh-inspired visual refresh with featured image emphasis */
-@import url(&#39;https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap&#39;);
 
 body,
 button,
 input,
 select,
 textarea {
-  font-family: Inter, ui-sans-serif, system-ui, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;
+  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -599,7 +598,7 @@ h6,
 #main-menu ul &gt; li &gt; a,
 .index-post .post-info &gt; h2,
 .item-post h1.post-title {
-  font-family: Inter, ui-sans-serif, system-ui, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;
+  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 600;
 }
@@ -609,7 +608,7 @@ h6,
 .author-description,
 .about-kicker,
 .about-photo figcaption {
-  font-family: Inter, ui-sans-serif, system-ui, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;
+  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   color: oklch(0% 0 0);
@@ -623,7 +622,7 @@ body.item.static_page .item-post .post-body,
 body.item.static_page .item-post .post-body p,
 body.item.static_page .item-post .post-body li,
 body.item.static_page .item-post .post-body blockquote {
-  font-family: source-serif-pro, Georgia, Cambria, &quot;Times New Roman&quot;, Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #242424;
@@ -645,7 +644,7 @@ body.static_page .post-body p {
 
 .item-post .post-body blockquote,
 body.item.static_page .item-post .post-body blockquote {
-  font-family: sohne, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif !important;
+  font-family: Arial, Helvetica, sans-serif !important;
   font-style: italic !important;
   color: #444 !important;
   background: transparent !important;
@@ -775,7 +774,7 @@ body.home #main-wrapper {
 }
 
 .index-post .post-info &gt; h2 {
-  font-family: Inter, ui-sans-serif, system-ui, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;
+  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 28px;
@@ -790,7 +789,7 @@ body.home #main-wrapper {
 }
 
 .index-post .post-snippet {
-  font-family: Inter, ui-sans-serif, system-ui, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;
+  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -807,6 +806,11 @@ body.home #main-wrapper {
   opacity: 1 !important;
 }
 
+.item-post .post-body img,
+body.item.static_page .item-post .post-body img {
+  opacity: 1 !important;
+}
+
 .item-post .post-item-inner {
   border: 0;
   border-radius: 0;
@@ -814,7 +818,7 @@ body.home #main-wrapper {
 }
 
 .item-post h1.post-title {
-  font-family: Inter, ui-sans-serif, system-ui, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;
+  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-size: 48px;
   line-height: 1.15em;
@@ -824,7 +828,7 @@ body.home #main-wrapper {
 }
 
 .item-post .post-body {
-  font-family: Roslindale, Georgia, Cambria, &quot;Times New Roman&quot;, serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   color: oklch(0% 0 0);
@@ -923,7 +927,7 @@ body.item .share-links li {
 
 #main-menu ul &gt; li &gt; a,
 #main-menu ul#main-menu-nav &gt; li &gt; a {
-  font-family: &#39;Inter&#39;, -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #ffffff;
@@ -1191,7 +1195,7 @@ body.item .share-links li {
 }
 
 .index-post .post-info &gt; h2 {
-  font-family: sohne, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 600;
   color: rgb(36, 36, 36);
@@ -1201,7 +1205,7 @@ body.item .share-links li {
 
 .item-post h1.post-title,
 body.item.static_page .item-post h1.post-title {
-  font-family: sohne, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 900;
   color: #242424;
@@ -1233,7 +1237,7 @@ body.item.static_page .item-post .post-body h3,
 body.item.static_page .item-post .post-body h4,
 body.item.static_page .item-post .post-body h5,
 body.item.static_page .item-post .post-body h6 {
-  font-family: sohne, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 900;
   color: rgb(36, 36, 36);
@@ -1245,7 +1249,7 @@ body.item.static_page .item-post .post-body h6 {
 
 .item-post .post-body h2,
 body.item.static_page .item-post .post-body h2 {
-  font-family: sohne, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 600;
   color: #242424;
@@ -1258,7 +1262,7 @@ body.item.static_page .item-post .post-body h2 {
 
 body.item.static_page .post-body h2,
 body.static_page .post-body h2 {
-  font-family: sohne, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif !important;
+  font-family: Arial, Helvetica, sans-serif !important;
   font-style: normal !important;
   font-weight: 600 !important;
   color: #242424 !important;
@@ -1293,13 +1297,13 @@ body.static_page .post-body h2 {
 .yv { line-height: 32px; }
 .yt { font-size: 20px; }
 .yx { margin-bottom: -0.46em; }
-.yc { font-family: source-serif-pro, Georgia, Cambria, &quot;Times New Roman&quot;, Times, serif; }
+.yc { font-family: Arial, Helvetica, sans-serif; }
 .yb { letter-spacing: -0.004em; }
 .ya { line-height: 1.58; }
 .mg { word-break: break-word; }
 .sq { overflow-wrap: break-word; }
 .b  { font-weight: 400; }
-.a  { font-family: medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; }
+.a  { font-family: Arial, Helvetica, sans-serif; }
 
 @media screen and (min-width: 1080px) {
   .zc { margin-top: 2.14em; }
@@ -1358,7 +1362,7 @@ body.item.static_page .item-post .post-body h6 {
 .post-date,
 .post-author,
 .post-labels a {
-  font-family: sohne, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   color: rgb(107, 107, 107);
@@ -1419,7 +1423,7 @@ body.item.static_page .item-post .post-body {
 
 .about-photo figcaption {
   margin-top: 10px;
-  font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   font-size: 13px;
   color: #667085;
@@ -1526,7 +1530,7 @@ body.item.static_page .item-post .post-body {
 }
 
 .landing-title {
-  font-family: sohne, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 56px;
   line-height: 1.08;
   letter-spacing: -0.02em;
@@ -1677,7 +1681,7 @@ body.item.static_page .item-post .post-body {
 .landing-hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-  grid-template-areas: 'media copy';
+  grid-template-areas: &#39;media copy&#39;;
   gap: 28px;
   align-items: start;
 }
@@ -1708,7 +1712,7 @@ body.item.static_page .item-post .post-body {
 .landing-hero-title {
   margin: 0;
   text-align: left;
-  font-family: medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 40px;
   line-height: 1.12;
   color: #101828;
@@ -1739,7 +1743,7 @@ body.item.static_page .item-post .post-body {
   font-size: 12px;
   letter-spacing: .1em;
   text-transform: uppercase;
-  font-family: medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .landing-news-panel .landing-post-grid {
@@ -1771,7 +1775,7 @@ body.item.static_page .item-post .post-body {
   font-size: 14px;
   letter-spacing: .08em;
   text-transform: uppercase;
-  font-family: medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .landing-headlines-list {
@@ -1929,7 +1933,7 @@ body.item.static_page .item-post .post-body {
 
 .landing-section-title {
   margin: 0 0 10px;
-  font-family: sohne, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
   line-height: 1.2;
   color: #101828;
@@ -1946,9 +1950,9 @@ body.item.static_page .item-post .post-body {
 .landing-about-dynamic p,
 .landing-about-dynamic li,
 .landing-about-dynamic blockquote {
-  font-family: Roslindale, Georgia, Cambria, &quot;Times New Roman&quot;, serif;
-  font-size: 20px;
-  line-height: 33px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.3;
   color: #707070;
 }
 
@@ -2152,8 +2156,8 @@ body.home .grid-posts {
   .landing-hero-grid {
     grid-template-columns: 1fr;
     grid-template-areas:
-      'copy'
-      'media';
+      &#39;copy&#39;
+      &#39;media&#39;;
   }
 
   .landing-hero-title {
@@ -3525,7 +3529,7 @@ body.home .grid-posts {
                             I&#39;m a problem solver at heart, driven by curiosity about how technology can tackle real-world challenges. My background is in computer science, with an M.Sc. and Ph.D. from CIn/UFPE (Brazil) and international experience as a visiting researcher at the Karlsruhe Institute of Technology (KIT, Germany).
                           </p>
                           <p class='landing-about-text'>
-                            I started my career as a software engineer at <a href='https://www.indragroup.com/en'>Indra</a>. I then spent five years as an Assistant Professor at <a href='https://ifal.edu.br/'>IFAL</a> &#8212; teaching algorithms, artificial intelligence, and software engineering to more than 400 students, founding the Laboratory of Data Analysis and Engineering (<a href='http://lead.ifal.edu.br/'>LEAD</a>), and earning the Professor of the Year award three years in a row.
+                            I started my career as a software engineer at <a href='https://www.indragroup.com/en'>Indra</a>. I then spent five years as a Lecturer (Tenured) at <a href='https://ifal.edu.br/'>IFAL</a> &#8212; teaching algorithms, artificial intelligence, and software engineering to more than 400 students, founding the Laboratory of Data Analysis and Engineering (<a href='http://lead.ifal.edu.br/'>LEAD</a>), and earning the Professor of the Year award three years in a row.
                           </p>
                         </div>
                         <p class='landing-about-more'><a href='/p/o-autor.html'>Read more</a></p>
