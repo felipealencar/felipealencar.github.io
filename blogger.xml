@@ -617,20 +617,7 @@ h6,
 .item-post .post-body,
 .item-post .post-body p,
 .item-post .post-body li,
-.item-post .post-body blockquote {
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  color: #242424;
-  font-size: 20px;
-  line-height: 1.58;
-  letter-spacing: -0.004em;
-  overflow-wrap: break-word;
-  word-break: break-word;
-  margin: 0;
-  margin-bottom: 0;
-}
-
+.item-post .post-body blockquote,
 body.item.static_page .item-post .post-body,
 body.item.static_page .item-post .post-body p,
 body.item.static_page .item-post .post-body li,
@@ -639,8 +626,8 @@ body.item.static_page .item-post .post-body blockquote {
   font-style: normal;
   font-weight: 400;
   color: #242424;
-  font-size: 15px;
-  line-height: 1.3;
+  font-size: 20px;
+  line-height: 1.58;
   letter-spacing: -0.004em;
   overflow-wrap: break-word;
   word-break: break-word;
@@ -709,7 +696,7 @@ body.item.static_page .item-post .post-body table.tr-caption-container img {
 }
 
 body {
-  background: #f8fafc;
+  background: #ffffff;
 }
 
 #outer-wrapper {
@@ -768,20 +755,26 @@ body.home #main-wrapper {
   overflow: hidden;
 }
 
+.index-post-inside-wrap {
+  display: flex;
+  align-items: stretch;
+  min-height: 220px;
+}
+
 .grid-posts .index-post:last-child {
   margin: 0 auto 32px;
 }
 
 .index-post .post-image-wrap {
-  float: none;
-  width: 100%;
-  height: 260px;
+  flex: 0 0 30%;
+  width: 30%;
+  height: auto;
   margin: 0;
 }
 
 .index-post .post-info {
-  float: none;
-  width: 100%;
+  flex: 0 0 70%;
+  width: 70%;
   padding: 20px 24px 22px;
   box-sizing: border-box;
 }
@@ -889,6 +882,168 @@ body.item .share-links li {
   width: calc(100% / 8);
 }
 
+.post-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 36px;
+  padding: 12px 0;
+  margin: 0;
+  border-top: 1px solid rgba(16, 24, 40, 0.12);
+  border-bottom: 1px solid rgba(16, 24, 40, 0.12);
+}
+
+.post-action,
+.post-share-menu summary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 28px;
+  min-height: 28px;
+  color: #111111;
+  font-size: 13px;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.post-action:hover,
+.post-share-menu summary:hover {
+  color: #666666;
+}
+
+.post-action-icon,
+.post-share-option:before {
+  display: inline-block;
+  font-family: 'Font Awesome 5 Free';
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.post-action-comments .post-action-icon:before {
+  content: '\f075';
+}
+
+.post-action-claps .post-action-icon:before {
+  content: '\f164';
+}
+
+.post-action-share .post-action-icon:before {
+  content: '\f1e0';
+}
+
+.post-action-count,
+.post-action-label {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.post-action-claps .post-reactions {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  height: 28px;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  opacity: 1;
+}
+
+.post-action-claps .post-reactions &gt; span:first-child {
+  display: none;
+}
+
+.post-action-claps .reactions-inner {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+}
+
+.post-share-menu {
+  position: relative;
+  margin-left: auto;
+}
+
+.post-share-menu summary {
+  list-style: none;
+}
+
+.post-share-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.post-share-options {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 8px);
+  z-index: 20;
+  display: flex;
+  gap: 4px;
+  padding: 8px;
+  background: #ffffff;
+  border: 1px solid #111111;
+  box-shadow: 3px 3px 0 #111111;
+}
+
+.post-share-option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  color: #111111;
+  text-decoration: none;
+}
+
+.post-share-option:hover {
+  background: #111111;
+  color: #ffffff;
+}
+
+.post-share-option.instagram-stories:before {
+  content: '\f1e0';
+}
+
+.post-share-option.facebook:before {
+  content: '\f39e';
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+}
+
+.post-share-option.x:before {
+  content: 'X';
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.post-share-option.threads:before {
+  content: '@';
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.post-share-option.linkedin:before {
+  content: '\f0e1';
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+}
+
+.post-share-option.whatsapp:before {
+  content: '\f232';
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+}
+
+.post-share-option.email:before {
+  content: '\f0e0';
+}
+
 .social .x a:before {
   content: &quot;X&quot;;
   font-family: inherit;
@@ -953,7 +1108,7 @@ body.item .share-links li {
 
 #header-wrap,
 #top-bar {
-  background: linear-gradient(165deg, #0c111d 0%, #111827 70%, #0f172a 100%);
+  background: #111111;
 }
 
 #header-wrap .container.row,
@@ -1273,8 +1428,8 @@ body.item.static_page .item-post .post-body h2 {
   margin-bottom: -0.28em;
 }
 
-body.item.static_page .post-body h2,
-body.static_page .post-body h2 {
+body.item.static_page .post-body &gt; h2,
+body.static_page .post-body &gt; h2 {
   font-family: Arial, Helvetica, sans-serif !important;
   font-style: normal !important;
   font-weight: 600 !important;
@@ -1295,8 +1450,8 @@ body.static_page .post-body h2 {
     margin-top: 1.95em;
   }
 
-  body.item.static_page .post-body h2,
-  body.static_page .post-body h2 {
+  body.item.static_page .post-body &gt; h2,
+  body.static_page .post-body &gt; h2 {
     font-size: 24px !important;
     line-height: 30px !important;
     letter-spacing: -0.016em !important;
@@ -1443,6 +1598,519 @@ body.item.static_page .item-post .post-body {
   line-height: 1.6em;
 }
 
+/* Static page components (.fa-page): About, CV, Experience, Education, Courses, Publications.
+   Arial at the landing page size, laid out like a classic academic CV.
+   #main-wrapper keeps these ahead of the generic .post-body rules without !important. */
+body.static_page .post-actions {
+  display: none;
+}
+
+body.item.static_page #main-wrapper {
+  max-width: 800px;
+}
+
+#main-wrapper .fa-page {
+  --fa-ink: #111111;
+  --fa-text: #222222;
+  --fa-muted: #5c5c5c;
+  --fa-accent: #d62828;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--fa-text);
+}
+
+#main-wrapper .fa-page p,
+#main-wrapper .fa-page li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  letter-spacing: 0;
+  color: var(--fa-text);
+}
+
+#main-wrapper .fa-page p {
+  margin: 0 0 14px;
+}
+
+#main-wrapper .fa-page strong {
+  color: var(--fa-ink);
+  font-weight: 700;
+}
+
+#main-wrapper .fa-page a {
+  color: var(--fa-accent);
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+#main-wrapper .fa-page a:hover {
+  color: var(--fa-ink);
+}
+
+#main-wrapper .fa-page .fa-lead {
+  font-size: 16px;
+  color: var(--fa-ink);
+}
+
+#main-wrapper .fa-page h2 {
+  margin: 40px 0 12px;
+  padding: 0 0 6px;
+  border-bottom: 1px solid var(--fa-ink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--fa-ink);
+}
+
+#main-wrapper .fa-page h2:first-child {
+  margin-top: 8px;
+}
+
+#main-wrapper .fa-page h3 {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.45;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: var(--fa-ink);
+}
+
+#main-wrapper .fa-page ul {
+  margin: 6px 0 0;
+  padding: 0 0 0 20px;
+}
+
+#main-wrapper .fa-page ul li {
+  list-style: disc outside;
+  margin: 0 0 4px;
+  padding: 0 0 0 2px;
+}
+
+#main-wrapper .fa-page ul li:before {
+  content: none;
+}
+
+/* Header block (CV) */
+#main-wrapper .fa-page .fa-name {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--fa-ink);
+}
+
+#main-wrapper .fa-page .fa-role,
+#main-wrapper .fa-page .fa-meta {
+  margin: 2px 0 0;
+  color: var(--fa-muted);
+}
+
+#main-wrapper .fa-page ul.fa-links {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+#main-wrapper .fa-page ul.fa-links li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#main-wrapper .fa-page ul.fa-links li:not(:last-child):after {
+  content: "\00b7";
+  margin: 0 8px;
+  color: var(--fa-muted);
+}
+
+/* Entry: role on the left, dates on the right, details below */
+#main-wrapper .fa-page .fa-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 24px;
+  padding: 10px 0;
+}
+
+#main-wrapper .fa-page .fa-body {
+  display: contents;
+}
+
+#main-wrapper .fa-page .fa-entry h3 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#main-wrapper .fa-page .fa-when {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  padding-top: 1px;
+  font-size: 14px;
+  color: var(--fa-muted);
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+#main-wrapper .fa-page .fa-org,
+#main-wrapper .fa-page .fa-desc,
+#main-wrapper .fa-page .fa-detail,
+#main-wrapper .fa-page .fa-entry ul {
+  grid-column: 1 / -1;
+}
+
+#main-wrapper .fa-page .fa-desc {
+  margin: 6px 0 0;
+}
+
+#main-wrapper .fa-page .fa-org {
+  margin: 0;
+  font-style: italic;
+}
+
+#main-wrapper .fa-page .fa-detail {
+  margin: 2px 0 0;
+  font-size: 14px;
+  color: var(--fa-muted);
+}
+
+/* Compact entry (skills): label on the left, text on the right */
+#main-wrapper .fa-page .fa-entry.fa-compact {
+  grid-template-columns: 150px minmax(0, 1fr);
+  padding: 4px 0;
+}
+
+#main-wrapper .fa-page .fa-compact .fa-when {
+  grid-column: 1;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--fa-ink);
+  text-align: left;
+  white-space: normal;
+}
+
+#main-wrapper .fa-page .fa-compact .fa-body p {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+}
+
+/* Publications */
+#main-wrapper .fa-page h3.fa-year {
+  margin: 24px 0 8px;
+}
+
+#main-wrapper .fa-page ol.fa-pubs {
+  margin: 0;
+  padding: 0;
+}
+
+#main-wrapper .fa-page ol.fa-pubs li {
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+}
+
+#main-wrapper .fa-page .fa-pub-title {
+  display: block;
+  font-weight: 700;
+  color: var(--fa-ink);
+}
+
+#main-wrapper .fa-page .fa-pub-authors,
+#main-wrapper .fa-page .fa-pub-venue {
+  display: block;
+}
+
+#main-wrapper .fa-page .fa-pub-venue {
+  font-style: italic;
+  color: var(--fa-muted);
+}
+
+#main-wrapper .fa-page .fa-pub-links {
+  font-style: normal;
+  white-space: nowrap;
+}
+
+/* Two columns (Courses) */
+#main-wrapper .fa-page .fa-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin: 0;
+}
+
+#main-wrapper .fa-page .fa-card h3 {
+  margin: 0 0 4px;
+}
+
+#main-wrapper .fa-page .fa-card ul {
+  margin: 0;
+}
+
+/* Quote and figures */
+#main-wrapper .fa-page .fa-callout {
+  margin: 24px 0;
+}
+
+#main-wrapper .fa-page .fa-callout p {
+  margin: 0;
+  font-style: italic;
+}
+
+#main-wrapper .fa-page .fa-figure {
+  margin: 28px 0;
+}
+
+#main-wrapper .fa-page .fa-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
+#main-wrapper .fa-page .fa-figure figcaption {
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 1.6;
+  font-style: italic;
+  color: var(--fa-muted);
+}
+
+@media screen and (max-width: 640px) {
+  #main-wrapper .fa-page .fa-entry,
+  #main-wrapper .fa-page .fa-entry.fa-compact {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #main-wrapper .fa-page .fa-entry h3,
+  #main-wrapper .fa-page .fa-when,
+  #main-wrapper .fa-page .fa-compact .fa-body p {
+    grid-column: 1;
+    grid-row: auto;
+    text-align: left;
+  }
+
+  /* Role first, then dates */
+  #main-wrapper .fa-page .fa-entry h3 {
+    order: 0;
+  }
+
+  #main-wrapper .fa-page .fa-entry .fa-when {
+    order: 1;
+  }
+
+  #main-wrapper .fa-page .fa-org,
+  #main-wrapper .fa-page .fa-desc,
+  #main-wrapper .fa-page .fa-detail,
+  #main-wrapper .fa-page .fa-entry ul {
+    order: 2;
+  }
+
+  #main-wrapper .fa-page .fa-compact .fa-when {
+    order: 0;
+  }
+
+  #main-wrapper .fa-page .fa-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Project graph (Projects and Publications): two columns joined by curves.
+   The edges are drawn by the fa-graph script near the end of the body. */
+body.item.static_page #main-wrapper:has(.fa-graph) {
+  max-width: 1160px;
+}
+
+#main-wrapper .fa-page .fa-graph {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 120px;
+}
+
+#main-wrapper .fa-page .fa-graph-col {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+#main-wrapper .fa-page .fa-edges {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+
+#main-wrapper .fa-page .fa-edge {
+  fill: none;
+  stroke: #c4c4c4;
+  stroke-width: 1.2;
+  transition: stroke .15s ease, opacity .15s ease;
+}
+
+#main-wrapper .fa-page .fa-dot {
+  fill: #ffffff;
+  stroke: #111111;
+  stroke-width: 1.2;
+}
+
+#main-wrapper .fa-page .fa-dot.is-linked {
+  fill: #111111;
+}
+
+#main-wrapper .fa-page .fa-graph.is-active .fa-edge {
+  opacity: .2;
+}
+
+#main-wrapper .fa-page .fa-graph.is-active .fa-edge.on {
+  opacity: 1;
+  stroke: var(--fa-accent);
+  stroke-width: 2;
+}
+
+#main-wrapper .fa-page .fa-proj,
+#main-wrapper .fa-page .fa-graph ol.fa-pubs li {
+  transition: opacity .15s ease;
+}
+
+#main-wrapper .fa-page .fa-graph.is-active .fa-proj,
+#main-wrapper .fa-page .fa-graph.is-active ol.fa-pubs li {
+  opacity: .4;
+}
+
+#main-wrapper .fa-page .fa-graph.is-active .fa-proj.on,
+#main-wrapper .fa-page .fa-graph.is-active ol.fa-pubs li.on {
+  opacity: 1;
+}
+
+#main-wrapper .fa-page h3.fa-area {
+  margin: 24px 0 2px;
+  color: var(--fa-muted);
+  font-size: 15px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+#main-wrapper .fa-page .fa-proj {
+  padding: 10px 0;
+}
+
+#main-wrapper .fa-page h4 {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.45;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: var(--fa-ink);
+}
+
+#main-wrapper .fa-page .fa-node-links {
+  margin: 4px 0 0;
+  font-size: 14px;
+}
+
+/* Numbered cross-references, shown when the columns stack */
+#main-wrapper .fa-page .fa-refs,
+#main-wrapper .fa-page .fa-backref {
+  display: none;
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: var(--fa-muted);
+}
+
+#main-wrapper .fa-page .fa-pub-num {
+  display: none;
+}
+
+#main-wrapper .fa-page a.fa-ref,
+#main-wrapper .fa-page .fa-pub-num {
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 6px;
+  box-sizing: border-box;
+  border: 1px solid var(--fa-ink);
+  color: var(--fa-ink);
+  font-size: 13px;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+#main-wrapper .fa-page a.fa-ref {
+  display: inline-flex;
+  margin: 0 0 0 6px;
+}
+
+#main-wrapper .fa-page a.fa-ref:hover {
+  background: var(--fa-ink);
+  color: #ffffff;
+}
+
+#main-wrapper .fa-page .fa-pub-num {
+  margin: 0 8px 0 0;
+}
+
+#main-wrapper .fa-page .fa-proj,
+#main-wrapper .fa-page .fa-graph ol.fa-pubs li {
+  scroll-margin-top: 90px;
+}
+
+@keyframes fa-flash {
+  from {
+    background: #fdecec;
+  }
+  to {
+    background: transparent;
+  }
+}
+
+#main-wrapper .fa-page .fa-proj:target,
+#main-wrapper .fa-page .fa-graph ol.fa-pubs li:target {
+  animation: fa-flash 1.8s ease-out;
+}
+
+@media screen and (max-width: 900px) {
+  #main-wrapper .fa-page .fa-graph {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #main-wrapper .fa-page .fa-edges {
+    display: none;
+  }
+
+  #main-wrapper .fa-page .fa-refs,
+  #main-wrapper .fa-page .fa-backref {
+    display: block;
+  }
+
+  #main-wrapper .fa-page .fa-pub-num {
+    display: inline-flex;
+  }
+
+  /* No hover highlight on phones: tapping should not fade the page */
+  #main-wrapper .fa-page .fa-graph.is-active .fa-proj,
+  #main-wrapper .fa-page .fa-graph.is-active ol.fa-pubs li {
+    opacity: 1;
+  }
+}
+
 .ad-disclosure {
   font-size: 11px;
   line-height: 1.4em;
@@ -1463,13 +2131,13 @@ body.item.static_page .item-post .post-body {
   --landing-intro-bg-pos-1: 0% 50%;
   --landing-intro-bg-pos-2: 50% 35%;
   --landing-intro-bg-pos-3: 0% 50%;
-  --landing-intro-bg-overlay: linear-gradient(165deg, rgba(12, 17, 29, 0.72) 0%, rgba(17, 24, 39, 0.72) 70%, rgba(15, 23, 42, 0.72) 100%);
+  --landing-intro-bg-overlay: linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18));
 }
 
 .landing-intro {
-  background-color: #0f172a;
+  background-color: #111111;
   color: #fff;
-  border: 1px solid rgba(148, 163, 184, 0.22);
+  border: 0;
   border-radius: 0;
   padding: 48px 34px 32px;
   margin: 0;
@@ -1677,9 +2345,11 @@ body.item.static_page .item-post .post-body {
 
 .landing-overlay-link {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 12px;
   color: #d62828;
-  font-weight: 700;
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .landing-about {
@@ -1728,67 +2398,93 @@ body.item.static_page .item-post .post-body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 40px;
   line-height: 1.12;
-  color: #101828;
+  letter-spacing: -0.01em;
+  color: #111111;
 }
 
 .landing-hero-role {
-  margin: 0 0 18px;
-  color: #475467;
-  font-size: 13px;
-  line-height: 1.8em;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-  font-weight: 700;
+  margin: 4px 0 18px;
+  color: #5c5c5c;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
 }
 
 .landing-news-panel,
 .landing-spotlight {
-  border: 1px solid rgba(16, 24, 40, 0.10);
-  border-radius: 0;
-  background: #f8fafc;
-  padding: 18px;
+  border: 0;
+  background: transparent;
+  padding: 0;
 }
 
 .landing-news-panel h3,
-.landing-spotlight h3 {
-  margin: 0 0 12px;
-  color: #475467;
-  font-size: 12px;
-  letter-spacing: .1em;
-  text-transform: uppercase;
+.landing-spotlight h3,
+.landing-headlines h3,
+.landing-contact-mini h3 {
+  margin: 0 0 4px;
+  padding: 0 0 6px;
+  border-bottom: 1px solid #111111;
+  color: #111111;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .landing-news-panel .landing-post-grid {
   grid-template-columns: 1fr;
+  gap: 0;
 }
 
 .landing-news-panel .landing-post-card {
-  background: #ffffff;
-  border-color: rgba(148, 163, 184, 0.30);
+  padding: 10px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.landing-news-panel .landing-post-card + .landing-post-card {
+  border-top: 1px solid #e5e5e5;
+}
+
+.landing-news-panel .landing-post-card a {
+  color: #111111;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.landing-news-panel .landing-post-card a:hover {
+  color: #d62828;
+  text-decoration: underline;
+}
+
+.landing-news-panel .landing-post-card .date {
+  margin-top: 2px;
+  color: #5c5c5c;
+  font-size: 13px;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .landing-headlines,
 .landing-contact-mini {
-  border-top: 1px solid rgba(16, 24, 40, 0.08);
-  background: #f8fafc;
-  padding: 26px 34px;
+  border-top: 0;
+  background: #ffffff;
+  padding: 0 34px 40px;
 }
 
 .landing-headlines-inner,
 .landing-contact-mini-inner {
-  max-width: 1100px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
 }
 
 .landing-headlines h3,
 .landing-contact-mini h3 {
-  margin: 0 0 12px;
-  color: #101828;
-  font-size: 14px;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 12px;
 }
 
 .landing-headlines-list {
@@ -1801,45 +2497,54 @@ body.item.static_page .item-post .post-body {
 }
 
 .landing-headlines-list a {
-  color: #0f172a;
-  font-weight: 600;
+  color: #111111;
+  font-size: 15px;
+  font-weight: 400;
   line-height: 1.5;
+}
+
+.landing-headlines-list a:hover {
+  color: #d62828;
+  text-decoration: underline;
 }
 
 .landing-headlines-list span {
   display: block;
-  color: #667085;
-  font-size: 12px;
+  color: #5c5c5c;
+  font-size: 13px;
   margin-top: 2px;
 }
 
 .landing-contact-mini p {
   margin: 0;
-  color: #344054;
+  color: #222222;
   font-size: 15px;
   line-height: 1.7;
 }
 
 .landing-contact-mini a {
   color: #d62828;
-  font-weight: 700;
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .landing-spotlight-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  gap: 24px 20px;
+  margin-top: 16px;
 }
 
 .landing-spotlight-card {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  border: 1px solid rgba(148, 163, 184, 0.30);
+  border: 0;
   border-radius: 0;
-  background: #ffffff;
-  padding: 14px;
-  color: #101828;
+  background: transparent;
+  padding: 0;
+  color: #111111;
 }
 
 .landing-spotlight-card img {
@@ -1847,19 +2552,24 @@ body.item.static_page .item-post .post-body {
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
-  border: 1px solid rgba(148, 163, 184, 0.22);
+  border: 1px solid #e5e5e5;
 }
 
 .landing-spotlight-card strong {
   display: block;
-  color: #0f172a;
+  color: #111111;
   font-size: 15px;
-  line-height: 1.3;
+  line-height: 1.4;
+}
+
+.landing-spotlight-card:hover strong {
+  color: #d62828;
+  text-decoration: underline;
 }
 
 .landing-spotlight-empty {
   margin: 0;
-  color: #475467;
+  color: #5c5c5c;
   font-size: 13px;
   line-height: 1.55;
 }
@@ -1892,7 +2602,7 @@ body.item.static_page .item-post .post-body {
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
-  border: 1px solid rgba(15, 39, 71, 0.22);
+  border: 0;
 }
 
 .landing-kicker {
@@ -1939,7 +2649,7 @@ body.item.static_page .item-post .post-body {
 
 .landing-about-text {
   margin: 0 0 14px;
-  color: #344054;
+  color: #222222;
   font-size: 15px;
   line-height: 1.75em;
 }
@@ -1965,8 +2675,13 @@ body.item.static_page .item-post .post-body {
 .landing-about-dynamic blockquote {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
-  line-height: 1.3;
-  color: #707070;
+  line-height: 1.7;
+  color: #222222;
+}
+
+.landing-about-dynamic a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .landing-about-fallback {
@@ -1975,12 +2690,14 @@ body.item.static_page .item-post .post-body {
 }
 
 .landing-about-more {
-  margin: 6px 0 20px;
+  margin: 6px 0 36px;
 }
 
 .landing-about-more a {
   color: #d62828;
-  font-weight: 700;
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .landing-cv {
@@ -2364,12 +3081,12 @@ body.home .grid-posts {
 
   .landing-news-panel,
   .landing-spotlight {
-    padding: 14px;
+    padding: 0;
   }
 
   .landing-headlines,
   .landing-contact-mini {
-    padding: 20px 22px;
+    padding: 0 22px 28px;
   }
 
   .landing-intro {
@@ -2579,6 +3296,16 @@ body.home .grid-posts {
     height: 220px;
   }
 
+  .index-post-inside-wrap {
+    display: block;
+    min-height: 0;
+  }
+
+  .index-post .post-image-wrap,
+  .index-post .post-info {
+    width: 100%;
+  }
+
   .index-post .post-info &gt; h2 {
     font-size: 24px;
   }
@@ -2720,7 +3447,7 @@ body.home .grid-posts {
               <b:widget-setting name='text-3'>Education and Awards</b:widget-setting>
               <b:widget-setting name='text-2'>Experience</b:widget-setting>
               <b:widget-setting name='text-5'>Courses</b:widget-setting>
-              <b:widget-setting name='text-4'>Publications</b:widget-setting>
+              <b:widget-setting name='text-4'>Projects &amp; Publications</b:widget-setting>
               <b:widget-setting name='text-7'>Contact</b:widget-setting>
               <b:widget-setting name='text-6'>Contact</b:widget-setting>
               <b:widget-setting name='sorting'>NONE</b:widget-setting>
@@ -2841,7 +3568,7 @@ body.home .grid-posts {
               <b:widget-setting name='text-3'>Education and Awards</b:widget-setting>
               <b:widget-setting name='text-2'>Experience</b:widget-setting>
               <b:widget-setting name='text-5'>Courses</b:widget-setting>
-              <b:widget-setting name='text-4'>Publications</b:widget-setting>
+              <b:widget-setting name='text-4'>Projects &amp; Publications</b:widget-setting>
               <b:widget-setting name='text-6'>Contact</b:widget-setting>
               <b:widget-setting name='sorting'>NONE</b:widget-setting>
               <b:widget-setting name='link-1'>https://www.felipealencar.net/p/o-autor.html</b:widget-setting>
@@ -2907,6 +3634,7 @@ body.home .grid-posts {
         'Experience': 'Experi&#234;ncia',
         'Education and Awards': 'Forma&#231;&#227;o e Pr&#234;mios',
         'Publications': 'Publica&#231;&#245;es',
+        'Projects & Publications': 'Projetos e Publica&#231;&#245;es',
         'Courses': 'Disciplinas',
         'Contact': 'Contato',
         'Blog': 'Blog'
@@ -3083,6 +3811,8 @@ body.home .grid-posts {
           'Forma&#231;&#227;o e Pr&#234;mios': '/p/formacao.html',
           'Publications': '/p/trabalhos-publicados.html',
           'Publica&#231;&#245;es': '/p/trabalhos-publicados.html',
+          'Projects & Publications': '/p/trabalhos-publicados.html',
+          'Projetos e Publica&#231;&#245;es': '/p/trabalhos-publicados.html',
           'Courses': '/p/disciplinas.html',
           'Disciplinas': '/p/disciplinas.html',
           'Contact': '/p/contato.html',
@@ -3225,11 +3955,10 @@ body.home .grid-posts {
               <b:widget-setting name='postLabelsLabel'>Tags</b:widget-setting>
               <b:widget-setting name='showBacklinks'>false</b:widget-setting>
               <b:widget-setting name='showInlineAds'>false</b:widget-setting>
-              <b:widget-setting name='showReactions'>false</b:widget-setting>
+              <b:widget-setting name='showReactions'>true</b:widget-setting>
             </b:widget-settings>
             <b:includable id='main' var='this'>
 <b:include name='homePostsHeadline'/>
-              <b:include name='searchMessage'/>
               <div class='blog-posts hfeed container'>
                 <b:class cond='data:view.isMultipleItems' name='index-post-wrap'/>
                 <b:class cond='data:view.isSingleItem' name='item-post-wrap'/>
@@ -3493,8 +4222,6 @@ body.home .grid-posts {
             <b:includable id='footerBylines' var='post'>
               <!-- Post Footer Extras -->
               <b:include data='post' name='postLabels'/>
-              <b:include data='post' name='postReactions'/>
-              <b:include data='post' name='postShareButtons'/>
             </b:includable>
             <b:includable id='googlePlusShare'>
   <div class='goog-inline-block google-plus-share-container'>
@@ -3542,7 +4269,7 @@ body.home .grid-posts {
                             I&#39;m a problem solver at heart, driven by curiosity about how technology can tackle real-world challenges. My background is in computer science, with an M.Sc. and Ph.D. from CIn/UFPE (Brazil) and international experience as a visiting researcher at the Karlsruhe Institute of Technology (KIT, Germany).
                           </p>
                           <p class='landing-about-text'>
-                            I started my career as a software engineer at <a href='https://www.indragroup.com/en'>Indra</a>. I then spent five years as a Lecturer (Tenured) at <a href='https://ifal.edu.br/'>IFAL</a> &#8212; teaching algorithms, artificial intelligence, and software engineering to more than 400 students, founding the Laboratory of Data Analysis and Engineering (<a href='http://lead.ifal.edu.br/'>LEAD</a>), and earning the Professor of the Year award three years in a row.
+                            I started my career as a software engineer at <a href='https://www.indragroup.com/en'>Indra</a>. I then spent six years as a Lecturer (Associate Professor level) at <a href='https://ifal.edu.br/'>IFAL</a> &#8212; teaching algorithms, artificial intelligence, and software engineering to more than 400 students, founding the Laboratory of Data Engineering and Analysis (<a href='http://lead.ifal.edu.br/'>LEAD</a>), and earning the Professor of the Year award three years in a row.
                           </p>
                         </div>
                         <p class='landing-about-more'><a href='/p/o-autor.html'>Read more</a></p>
@@ -3554,7 +4281,7 @@ body.home .grid-posts {
                           (function() {
                             var grid = document.getElementById('landing-post-grid');
                             if (!grid) return;
-                            var feedUrl = '/feeds/posts/default/-/en?alt=json&max-results=50&orderby=published';
+                            var feedUrl = '/feeds/posts/default/-/en?alt=json&max-results=10&orderby=published';
                             fetch(feedUrl)
                               .then(function(r) { return r.json(); })
                               .then(function(data) {
@@ -3829,8 +4556,11 @@ body.home .grid-posts {
               <div class='post-item-inner'>
                 <b:include data='post' name='postMeta'/>
                 <b:include data='post' name='postHeader'/>
+                <b:include data='post' name='postActionBar'/>
                 <b:include data='post' name='postBody'/>
                 <b:include cond='data:view.isPost' data='post' name='footerBylines'/>
+                <b:if cond='data:view.isPost and (data:widgets any w =&gt; w.sectionId == &quot;ty-post-after-ad&quot;)'><div class='ad-disclosure'>Advertisement</div></b:if>
+                <b:if cond='data:view.isPost'><b:tag cond='data:widgets any w =&gt; w.sectionId == &quot;ty-post-after-ad&quot;' id='nxt-ad' name='div'/></b:if>
               </div>
               <b:include cond='data:view.isPost' data='post' name='postFooter'/>
             </b:includable>
@@ -3888,9 +4618,7 @@ body.home .grid-posts {
               <div class='post-body post-content'>
                 <data:post.body/>
               </div>
-               <!-- Ads after post content. -->
-            <b:if cond='data:view.isPost and (data:widgets any w =&gt; w.sectionId == &quot;ty-post-after-ad&quot;)'><div class='ad-disclosure'>Advertisement</div></b:if>
-            <b:if cond='data:view.isPost'><b:tag cond='data:widgets any w =&gt; w.sectionId == &quot;ty-post-after-ad&quot;' id='nxt-ad' name='div'/></b:if>
+              <b:include cond='data:view.isPost' data='post' name='postActionBar'/>
             </b:includable>
             <b:includable id='postBodySnippet' var='post'>
               <b:include data='post' name='postBody'/>
@@ -3987,7 +4715,7 @@ body.home .grid-posts {
               <b:comment>Disabled</b:comment>   
             </b:includable>
             <b:includable id='postHeader' var='post'>
-              <b:include cond='data:view.isPost' data='post' name='postBreadcrumbs'/>
+              <b:include cond='data:view.isPost' data='post' name='postLabels'/>
               <b:include data='post' name='postTitle'/>
               <b:include cond='data:view.isPost' data='post' name='headerByline'/>
             </b:includable>
@@ -4117,6 +4845,41 @@ body.home .grid-posts {
                   </ul>
                 </div>
               </b:if>
+            </b:includable>
+            <b:includable id='postActionBar' var='post'>
+              <div class='post-actions' role='group' aria-label='Post actions'>
+                <b:if cond='data:post.allowComments'>
+                  <a class='post-action post-action-comments' expr:href='data:post.commentsUrl' expr:onclick='data:post.commentsUrlOnclick' title='Comments'>
+                    <span class='post-action-icon' aria-hidden='true'/>
+                    <span class='post-action-count'><data:post.numberOfComments/></span>
+                  </a>
+                </b:if>
+                <b:if cond='data:allBylineItems.reactions'>
+                  <span class='post-action post-action-claps' title='Claps'>
+                    <span class='post-action-icon' aria-hidden='true'/>
+                    <span class='post-action-label'>Claps</span>
+                    <b:include data='post' name='postReactions'/>
+                  </span>
+                </b:if>
+                <details class='post-share-menu'>
+                  <summary class='post-action post-action-share' title='Share'>
+                    <span class='post-action-icon' aria-hidden='true'/>
+                  </summary>
+                  <div class='post-share-options'>
+                    <a aria-label='Generate story image' class='post-share-option instagram-stories story-generator-trigger' href='javascript:;' onclick='return window.generateStoryImageFromShare(event,this);' rel='nofollow' title='Generate story image'/>
+                    <a aria-label='Share on Facebook' class='post-share-option facebook' expr:href='&quot;https://www.facebook.com/sharer.php?u=&quot; + data:post.url' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=550, height=650, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank' title='Facebook'/>
+                    <a aria-label='Share on X' class='post-share-option x' expr:href='&quot;https://x.com/intent/post?url=&quot; + data:post.url + &quot;&amp;text=&quot; + data:post.title' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=550, height=450, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank' title='X'/>
+                    <a aria-label='Share on Threads' class='post-share-option threads' expr:href='&quot;https://www.threads.net/intent/post?text=&quot; + data:post.title + &quot; &quot; + data:post.url' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=550, height=650, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank' title='Threads'/>
+                    <a aria-label='Share on LinkedIn' class='post-share-option linkedin' expr:href='&quot;https://www.linkedin.com/shareArticle?url=&quot; + data:post.url' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=550, height=650, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank' title='LinkedIn'/>
+                    <b:if cond='data:blog.isMobileRequest'>
+                      <a aria-label='Share on WhatsApp' class='post-share-option whatsapp whatsapp-mobile' expr:href='&quot;https://api.whatsapp.com/send?text=&quot; + data:post.title + &quot; | &quot; + data:post.url' rel='nofollow' target='_blank' title='WhatsApp'/>
+                      <b:else/>
+                      <a aria-label='Share on WhatsApp' class='post-share-option whatsapp whatsapp-desktop' expr:href='&quot;https://web.whatsapp.com/send?text=&quot; + data:post.title + &quot; | &quot; + data:post.url' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=900, height=550, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank' title='WhatsApp'/>
+                    </b:if>
+                    <a aria-label='Share by email' class='post-share-option email' expr:href='&quot;mailto:?subject=&quot; + data:post.title + &quot;&amp;body=&quot; + data:post.url' rel='nofollow' title='Email'/>
+                  </div>
+                </details>
+              </div>
             </b:includable>
             <b:includable id='postShortMeta'>
               <b:comment>Disabled</b:comment> 
@@ -7570,6 +8333,182 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
       initializeMobileMenu();
     }
   })();
+//]]>
+</script>
+
+<!-- Project graph: draws curves from projects to their publications -->
+<script type='text/javascript'>
+//<![CDATA[
+(function() {
+  var NS = 'http://www.w3.org/2000/svg';
+
+  function portY(el, box) {
+    var r = el.getBoundingClientRect();
+    return r.top - box.top + Math.min(r.height, 24) / 2;
+  }
+
+  function addDot(svg, x, y, linked) {
+    var dot = document.createElementNS(NS, 'circle');
+    dot.setAttribute('cx', x);
+    dot.setAttribute('cy', y);
+    dot.setAttribute('r', 4);
+    dot.setAttribute('class', linked ? 'fa-dot is-linked' : 'fa-dot');
+    svg.appendChild(dot);
+  }
+
+  function draw(graph) {
+    var svg = graph.querySelector('svg.fa-edges');
+    if (!svg) {
+      svg = document.createElementNS(NS, 'svg');
+      svg.setAttribute('class', 'fa-edges');
+      svg.setAttribute('aria-hidden', 'true');
+      graph.insertBefore(svg, graph.firstChild);
+    }
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+
+    var left = graph.querySelector('.fa-graph-projects');
+    var right = graph.querySelector('.fa-graph-pubs');
+    if (!left || !right || getComputedStyle(svg).display === 'none') return;
+
+    var box = graph.getBoundingClientRect();
+    svg.setAttribute('width', box.width);
+    svg.setAttribute('height', box.height);
+    var x1 = left.getBoundingClientRect().right - box.left + 10;
+    var x2 = right.getBoundingClientRect().left - box.left - 10;
+    var dx = (x2 - x1) / 2;
+
+    var ports = {};
+    var linked = {};
+    graph.querySelectorAll('.fa-proj[id]').forEach(function(node) {
+      ports[node.id] = portY(node.querySelector('h4') || node, box);
+    });
+
+    var pubDots = [];
+    graph.querySelectorAll('.fa-pubs li').forEach(function(li, i) {
+      li.setAttribute('data-fa-i', i);
+      var y2 = portY(li.querySelector('.fa-pub-title') || li, box);
+      var ids = (li.getAttribute('data-project') || '').split(/\s+/);
+      var hasEdge = false;
+      ids.forEach(function(id) {
+        if (!id || ports[id] === undefined) return;
+        var y1 = ports[id];
+        var path = document.createElementNS(NS, 'path');
+        path.setAttribute('d', 'M' + x1 + ' ' + y1 + ' C' + (x1 + dx) + ' ' + y1 + ' ' + (x2 - dx) + ' ' + y2 + ' ' + x2 + ' ' + y2);
+        path.setAttribute('class', 'fa-edge');
+        path.setAttribute('data-from', id);
+        path.setAttribute('data-to', i);
+        svg.appendChild(path);
+        linked[id] = true;
+        hasEdge = true;
+      });
+      pubDots.push([y2, hasEdge]);
+    });
+
+    Object.keys(ports).forEach(function(id) {
+      addDot(svg, x1, ports[id], linked[id]);
+    });
+    pubDots.forEach(function(d) {
+      addDot(svg, x2, d[0], d[1]);
+    });
+  }
+
+  function highlight(graph, target) {
+    var svg = graph.querySelector('svg.fa-edges');
+    if (!svg || getComputedStyle(svg).display === 'none') target = null;
+    graph.querySelectorAll('.on').forEach(function(el) { el.classList.remove('on'); });
+    if (!target) {
+      graph.classList.remove('is-active');
+      return;
+    }
+    var edges;
+    if (target.classList.contains('fa-proj')) {
+      edges = graph.querySelectorAll('.fa-edge[data-from="' + target.id + '"]');
+    } else {
+      edges = graph.querySelectorAll('.fa-edge[data-to="' + target.getAttribute('data-fa-i') + '"]');
+    }
+    target.classList.add('on');
+    edges.forEach(function(edge) {
+      edge.classList.add('on');
+      var node = document.getElementById(edge.getAttribute('data-from'));
+      var li = graph.querySelector('.fa-pubs li[data-fa-i="' + edge.getAttribute('data-to') + '"]');
+      if (node) node.classList.add('on');
+      if (li) li.classList.add('on');
+    });
+    graph.classList.add('is-active');
+  }
+
+  // Numbered links for narrow screens: project -> papers and paper -> project
+  function buildRefs(graph) {
+    var refs = {};
+    graph.querySelectorAll('.fa-pubs li').forEach(function(li, i) {
+      var n = i + 1;
+      if (!li.id) li.id = 'pub-' + n;
+      var title = li.querySelector('.fa-pub-title');
+      if (title && !title.querySelector('.fa-pub-num')) {
+        var num = document.createElement('span');
+        num.className = 'fa-pub-num';
+        num.textContent = n;
+        title.insertBefore(num, title.firstChild);
+      }
+      var projects = [];
+      (li.getAttribute('data-project') || '').split(/\s+/).forEach(function(id) {
+        var node = id && document.getElementById(id);
+        if (!node) return;
+        (refs[id] = refs[id] || []).push([n, li.id]);
+        var name = node.querySelector('h4');
+        projects.push('<a href="#' + id + '">' + (name ? name.textContent : id) + '</a>');
+      });
+      if (projects.length && !li.querySelector('.fa-backref')) {
+        var back = document.createElement('p');
+        back.className = 'fa-backref';
+        back.innerHTML = 'Project: ' + projects.join(', ');
+        li.appendChild(back);
+      }
+    });
+    Object.keys(refs).forEach(function(id) {
+      var node = document.getElementById(id);
+      if (!node || node.querySelector('.fa-refs')) return;
+      var line = document.createElement('p');
+      line.className = 'fa-refs';
+      line.appendChild(document.createTextNode(refs[id].length > 1 ? 'Papers' : 'Paper'));
+      refs[id].forEach(function(ref) {
+        var a = document.createElement('a');
+        a.className = 'fa-ref';
+        a.href = '#' + ref[1];
+        a.textContent = ref[0];
+        line.appendChild(a);
+      });
+      var desc = node.querySelector('.fa-desc');
+      node.insertBefore(line, desc ? desc.nextSibling : null);
+    });
+  }
+
+  function init() {
+    document.querySelectorAll('.fa-graph').forEach(function(graph) {
+      buildRefs(graph);
+      var redraw = function() { window.requestAnimationFrame(function() { draw(graph); }); };
+      redraw();
+      window.addEventListener('load', redraw);
+      if (window.ResizeObserver) {
+        new ResizeObserver(redraw).observe(graph);
+      } else {
+        window.addEventListener('resize', redraw);
+      }
+      ['mouseover', 'focusin'].forEach(function(type) {
+        graph.addEventListener(type, function(event) {
+          highlight(graph, event.target.closest('.fa-proj, .fa-pubs li'));
+        });
+      });
+      graph.addEventListener('mouseleave', function() { highlight(graph, null); });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
 //]]>
 </script>
 
